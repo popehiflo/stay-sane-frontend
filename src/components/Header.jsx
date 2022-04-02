@@ -1,7 +1,13 @@
 import React from 'react';
 import styledComponents from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBrain, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBrain,
+  faMagnifyingGlass,
+  faBell,
+  faBellSlash,
+  faCartShopping,
+} from '@fortawesome/free-solid-svg-icons';
 
 const HeaderWrapper = styledComponents.header`
   height: 60px;
@@ -9,51 +15,87 @@ const HeaderWrapper = styledComponents.header`
 `;
 
 const HeaderContent = styledComponents.div`
-  background-color: red;
-  padding: 10px 20px;
+  //background-color: red;
+  padding: 10px 25px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  color: var(--black);
 `;
 
 const HeaderLogo = styledComponents.div`
   flex: 1;
+`;
+const Logo = styledComponents.h2`
+  font-weight: normal;
+  width: max-content;
 `;
 
 const HeaderSearch = styledComponents.div`
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 const Internationalization = styledComponents.span`
   font-size: 14px;
   cursor: pointer;
 `;
-const Search = styledComponents.div`
-  // border: 1px solid lightgray;
-  border: var(--border);
+const SearchContent = styledComponents.div`
+  // border: 0.5px solid lightgray;
+  border: var(--light-border);
+  display: flex;
   align-items: center;
+  margin-left: 25px;
+  padding: 5px;
+`;
+const InputSearch = styledComponents.input`
+  border: none;
 `;
 
 const HeaderMenu = styledComponents.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+const MenuItem = styledComponents.div`
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 25px;
 `;
 
 const Header = () => (
   <HeaderWrapper>
     <HeaderContent>
       <HeaderLogo>
-        <FontAwesomeIcon icon={faBrain} />
-        {' '}
-        Mental Health
+        <Logo>
+          <FontAwesomeIcon icon={faBrain} style={{ color: '#1977cc' }} />
+          {' '}
+          Mental Health
+        </Logo>
       </HeaderLogo>
       <HeaderSearch>
         <Internationalization>EN</Internationalization>
-        <Search>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-          search text ...
-        </Search>
+        <SearchContent>
+          <InputSearch />
+          <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: 'gray', fontSize: 16 }} />
+        </SearchContent>
       </HeaderSearch>
-      <HeaderMenu>Menu</HeaderMenu>
+      <HeaderMenu>
+        <MenuItem>
+          <FontAwesomeIcon icon={faBell} />
+        </MenuItem>
+        <MenuItem>
+          <FontAwesomeIcon icon={faBellSlash} />
+        </MenuItem>
+        <MenuItem>
+          <FontAwesomeIcon icon={faCartShopping} />
+        </MenuItem>
+        <MenuItem>
+          Users
+        </MenuItem>
+      </HeaderMenu>
     </HeaderContent>
   </HeaderWrapper>
 );
