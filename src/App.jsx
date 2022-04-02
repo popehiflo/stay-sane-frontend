@@ -1,6 +1,8 @@
+import HomePage from './pages/HomePage';
+
 const App = () => (
-  <div className="App">
-    Hola!
+  <div>
+    <HomePage />
   </div>
 );
 
