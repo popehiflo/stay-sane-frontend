@@ -1,0 +1,41 @@
+export const sliders = [
+  {
+    idSlide: 1,
+    imgSlide: 'https://i.ibb.co/XsdmR2c/1.png',
+    titleSlide: 'The Emotional Brain',
+    descriptionSlide: 'Diversos autores llaman así al sistema límbico. Este es el encargado de regular las emociones, pero no es su única función, tambien tiene un papel importante en el aprendizaje, memoria y en respuestas fisiológicas ante ciertos estímulos.',
+    colorSlide: 'f5fafd',
+  },
+  {
+    idSlide: 2,
+    imgSlide: 'https://i.ibb.co/DG69bQ4/2.png',
+    titleSlide: 'Sin contratos',
+    descriptionSlide: 'Deja de pagar costosas consultas ambulatorias. Nuestro concepto de `&dquot;`consulta por uso`&dquot;` te da la garantía de acceder a un psícologo de forma fácil, rápida y económica',
+    colorSlide: 'fcf1ed',
+  },
+  {
+    idSlide: 3,
+    imgSlide: 'https://i.ibb.co/cXFnLLV/3.png',
+    titleSlide: 'LOUNGEWEAR LOVE',
+    descriptionSlide: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    colorSlide: 'fbf0f4',
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    img: 'https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'INFANTIL',
+  },
+  {
+    id: 2,
+    img: 'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'ADOLESCENTE',
+  },
+  {
+    id: 3,
+    img: 'https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+    title: 'ADULTO',
+  },
+];
