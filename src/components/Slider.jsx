@@ -12,6 +12,7 @@ const SliderWrapper = styledComponents.div`
   height: 100vh;
   display: flex;
   position: relative;
+  overflow: hidden;
 `;
 const Arrow = styledComponents.div`
   width: 50px;
@@ -30,7 +31,7 @@ const Arrow = styledComponents.div`
   right: ${(props) => (props.direction === 'right' && '10px')};
   margin: auto;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.9;
   z-index: 2;
 `;
 
@@ -38,12 +39,44 @@ const SliderContainer = styledComponents.div`
   height: 100%;
   display: flex;
   transition: all 1.5s ease;
-  transform: translateX(${(props) => props.slideIndex - 100}vw);
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Slide = styledComponents.div`
   width: 100vw;
-  background-color: ${(props) => props.bg};
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #${(props) => props.bg};
+`;
+
+const SlideContentImg = styledComponents.div`
+  height: 100%;
+  flex: 1;
+`;
+const SlideImage = styledComponents.img`
+  height: 70%;
+`;
+
+const SlideContentInfo = styledComponents.div`
+  flex: 1;
+  padding: 50px;
+`;
+const SlideTitle = styledComponents.h1`
+  font-size: 70px;
+  color: var(--black);
+  text-shadow: var(--text-shadow);
+`;
+const SlideDescription = styledComponents.p`
+  margin: 50px 0px;
+  font-size: 20px;
+  color: var(--light-color);
+  font-weight: 500;
+`;
+const SlideButton = styledComponents.button`
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 `;
 
 const Slider = () => {
@@ -64,7 +97,15 @@ const Slider = () => {
       <SliderContainer slideIndex={slideIndex}>
         {sliders.map((item) => (
           <Slide key={item.idSlide} bg={item.colorSlide}>
-            Slide!
+            <SlideContentImg>
+              <SlideImage src={item.imgSlide} />
+            </SlideContentImg>
+            <SlideContentInfo>
+              <SlideTitle>{item.titleSlide}</SlideTitle>
+              <SlideDescription>{item.descriptionSlide}</SlideDescription>
+              <SlideButton>Make an Appointment</SlideButton>
+            </SlideContentInfo>
+            <SlideContentInfo />
           </Slide>
         ))}
       </SliderContainer>
