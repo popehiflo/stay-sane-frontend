@@ -1,14 +1,16 @@
 export const sliders = [
   {
     idSlide: 1,
-    imgSlide: 'https://i.ibb.co/XsdmR2c/1.png',
+    imgSlide: 'https://i.ibb.co/zNVCB3c/home-mind-img.png',
+    alt: 'alt slider 1',
     titleSlide: 'The Emotional Brain',
     descriptionSlide: 'Diversos autores llaman así al sistema límbico. Este es el encargado de regular las emociones, pero no es su única función, tambien tiene un papel importante en el aprendizaje, memoria y en respuestas fisiológicas ante ciertos estímulos.',
-    colorSlide: 'f5fafd',
+    colorSlide: 'f5f5f5',
   },
   {
     idSlide: 2,
     imgSlide: 'https://i.ibb.co/DG69bQ4/2.png',
+    alt: 'alt slider 2',
     titleSlide: 'Sin contratos',
     descriptionSlide: 'Deja de pagar costosas consultas ambulatorias. Nuestro concepto de `&dquot;`consulta por uso`&dquot;` te da la garantía de acceder a un psícologo de forma fácil, rápida y económica',
     colorSlide: 'fcf1ed',
@@ -16,6 +18,7 @@ export const sliders = [
   {
     idSlide: 3,
     imgSlide: 'https://i.ibb.co/cXFnLLV/3.png',
+    alt: 'alt slider 3',
     titleSlide: 'LOUNGEWEAR LOVE',
     descriptionSlide: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     colorSlide: 'fbf0f4',
