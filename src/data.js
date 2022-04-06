@@ -17,10 +17,10 @@ export const sliders = [
   },
   {
     idSlide: 3,
-    imgSlide: 'https://i.ibb.co/cXFnLLV/3.png',
+    imgSlide: 'https://i.ibb.co/zNVCB3c/home-mind-img.png',
     alt: 'alt slider 3',
-    titleSlide: 'LOUNGEWEAR LOVE',
-    descriptionSlide: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    titleSlide: 'The Emotional Brain',
+    descriptionSlide: 'Diversos autores llaman así al sistema límbico. Este es el encargado de regular las emociones, pero no es su única función, tambien tiene un papel importante en el aprendizaje, memoria y en respuestas fisiológicas ante ciertos estímulos.',
     colorSlide: 'fbf0f4',
   },
 ];
