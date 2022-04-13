@@ -8,6 +8,7 @@ import {
 import { sliders } from '../data';
 
 const SliderWrapper = styledComponents.div`
+  margin-top: 60px; //mio
   width: 100%;
   height: 100vh;
   display: flex;
@@ -54,8 +55,9 @@ const SlideContentImg = styledComponents.div`
   height: 100%;
   flex: 1;
 `;
+
 const SlideImage = styledComponents.img`
-  height: 70%;
+  height: 80%;
 `;
 
 const SlideContentInfo = styledComponents.div`
@@ -72,6 +74,7 @@ const SlideDescription = styledComponents.p`
   font-size: 20px;
   color: var(--light-color);
   font-weight: 500;
+  letter-spacing: 1px;
 `;
 const SlideButton = styledComponents.button`
   padding: 10px;
@@ -105,7 +108,6 @@ const Slider = () => {
               <SlideDescription>{item.descriptionSlide}</SlideDescription>
               <SlideButton>Make an Appointment</SlideButton>
             </SlideContentInfo>
-            <SlideContentInfo />
           </Slide>
         ))}
       </SliderContainer>
