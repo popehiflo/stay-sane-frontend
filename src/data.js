@@ -12,7 +12,7 @@ export const sliders = [
     imgSlide: 'https://i.ibb.co/DG69bQ4/2.png',
     alt: 'alt slider 2',
     titleSlide: 'Sin contratos',
-    descriptionSlide: 'Deja de pagar costosas consultas ambulatorias. Nuestro concepto de `&dquot;`consulta por uso`&dquot;` te da la garantía de acceder a un psícologo de forma fácil, rápida y económica',
+    descriptionSlide: 'Deja de pagar costosas consultas ambulatorias. Nuestro concepto de pagar por uso es la forma fácil, rápida y económica',
     colorSlide: 'fcf1ed',
   },
   {
