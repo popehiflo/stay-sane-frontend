@@ -10,7 +10,13 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const HeaderWrapper = styledComponents.header`
+  position: fixed;
   height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
 `;
 
@@ -65,39 +71,47 @@ const MenuItem = styledComponents.div`
   margin-left: 25px;
 `;
 
-const Header = () => (
-  <HeaderWrapper>
-    <HeaderContent>
-      <HeaderLogo>
-        <Logo>
-          <FontAwesomeIcon icon={faBrain} style={{ color: '#1977cc' }} />
-          {' '}
-          Mental Health
-        </Logo>
-      </HeaderLogo>
-      <HeaderSearch>
-        <Internationalization>EN</Internationalization>
-        <SearchContent>
-          <InputSearch />
-          <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: 'gray', fontSize: 16 }} />
-        </SearchContent>
-      </HeaderSearch>
-      <HeaderMenu>
-        <MenuItem>
-          <FontAwesomeIcon icon={faBell} />
-        </MenuItem>
-        <MenuItem>
-          <FontAwesomeIcon icon={faBellSlash} />
-        </MenuItem>
-        <MenuItem>
-          <FontAwesomeIcon icon={faCartShopping} />
-        </MenuItem>
-        <MenuItem>
-          Users
-        </MenuItem>
-      </HeaderMenu>
-    </HeaderContent>
-  </HeaderWrapper>
-);
+const Header = () => {
+  const itemsCarrito = 2;
+  return (
+    <HeaderWrapper>
+      <HeaderContent>
+        <HeaderLogo>
+          <Logo>
+            <FontAwesomeIcon icon={faBrain} style={{ color: '#1977cc' }} beat />
+            {' '}
+            Mental Health
+          </Logo>
+        </HeaderLogo>
+        <HeaderSearch>
+          <Internationalization>EN</Internationalization>
+          <SearchContent>
+            <InputSearch placeholder="search" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: 'gray', fontSize: 16 }} />
+          </SearchContent>
+        </HeaderSearch>
+        <HeaderMenu>
+          { itemsCarrito > 1
+            ? (
+              <MenuItem>
+                <FontAwesomeIcon icon={faBell} bounce />
+              </MenuItem>
+            )
+            : (
+              <MenuItem>
+                <FontAwesomeIcon icon={faBellSlash} />
+              </MenuItem>
+            )}
+          <MenuItem>
+            <FontAwesomeIcon icon={faCartShopping} />
+          </MenuItem>
+          <MenuItem>
+            Users
+          </MenuItem>
+        </HeaderMenu>
+      </HeaderContent>
+    </HeaderWrapper>
+  );
+};
 
 export default Header;
