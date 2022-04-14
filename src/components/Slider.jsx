@@ -73,8 +73,7 @@ const SlideDescription = styledComponents.p`
   margin: 50px 0px;
   font-size: 20px;
   color: var(--light-color);
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 400;
 `;
 const SlideButton = styledComponents.button`
   padding: 10px;
@@ -84,7 +83,7 @@ const SlideButton = styledComponents.button`
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const handleClick = (direction) => {
+  const handleArrowClick = (direction) => {
     if (direction === 'left') {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
     } else {
@@ -94,7 +93,7 @@ const Slider = () => {
 
   return (
     <SliderWrapper>
-      <Arrow direction="left" onClick={() => handleClick('left')}>
+      <Arrow direction="left" onClick={() => handleArrowClick('left')}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </Arrow>
       <SliderContainer slideIndex={slideIndex}>
@@ -111,7 +110,7 @@ const Slider = () => {
           </Slide>
         ))}
       </SliderContainer>
-      <Arrow direction="right" onClick={() => handleClick('right')}>
+      <Arrow direction="right" onClick={() => handleArrowClick('right')}>
         <FontAwesomeIcon icon={faChevronRight} />
       </Arrow>
     </SliderWrapper>
