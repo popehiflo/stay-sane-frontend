@@ -21,8 +21,7 @@ const HeaderWrapper = styledComponents.header`
 `;
 
 const HeaderContent = styledComponents.div`
-  //background-color: red;
-  padding: 10px 25px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,7 +79,7 @@ const Header = () => {
           <Logo>
             <FontAwesomeIcon icon={faBrain} style={{ color: '#1977cc' }} beat />
             {' '}
-            Mental Health
+            Stay Sane
           </Logo>
         </HeaderLogo>
         <HeaderSearch>
@@ -91,20 +90,23 @@ const Header = () => {
           </SearchContent>
         </HeaderSearch>
         <HeaderMenu>
-          { itemsCarrito > 1
+          <MenuItem>
+            <FontAwesomeIcon icon={faBell} />
+          </MenuItem>
+          <MenuItem>
+            <FontAwesomeIcon icon={faBellSlash} />
+          </MenuItem>
+          { itemsCarrito > 0
             ? (
               <MenuItem>
-                <FontAwesomeIcon icon={faBell} bounce />
+                <FontAwesomeIcon icon={faCartShopping} bounce />
               </MenuItem>
             )
             : (
               <MenuItem>
-                <FontAwesomeIcon icon={faBellSlash} />
+                <FontAwesomeIcon icon={faCartShopping} />
               </MenuItem>
             )}
-          <MenuItem>
-            <FontAwesomeIcon icon={faCartShopping} />
-          </MenuItem>
           <MenuItem>
             Users
           </MenuItem>

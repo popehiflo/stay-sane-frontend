@@ -1,4 +1,5 @@
 import React from 'react';
+import Categories from '../components/Categories';
 import Header from '../components/Header';
 import Slider from '../components/Slider';
 
@@ -6,7 +7,7 @@ const HomePage = () => (
   <div>
     <Header />
     <Slider />
-    <Slider />
+    <Categories />
   </div>
 );
 
